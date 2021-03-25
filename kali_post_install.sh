@@ -12,6 +12,11 @@ sudo apt-get install fzf
 sudo apt-get install tree
 sudo apt-get install powershell-empire
 
+#Custom Terminator
+sudo pip install requests
+mkdir -p ~/.config/terminator/plugins
+wget https://git.io/v5Zww -O ~/.config/terminator/plugins/terminator-themes.py
+
 #Install SublimeText
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -44,3 +49,8 @@ sudo python3 setup.py install
 git clone https://github.com/Malfrats/xeuledoc.git /opt/xeuledoc
 cd /opt/xeuledoc/
 sudo python3 setup.py install
+
+
+echo "Pour le profil Terminator ACI, après l'avoir installé via le plugin, aller dans :"
+echo "Preferences > Layout > Terminal > ACI"
+echo "Et dans Global, cocher Réutiliser les profils pour les nouveaux terminaux."
