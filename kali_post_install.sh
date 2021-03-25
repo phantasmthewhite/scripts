@@ -20,6 +20,7 @@ do
 			;;
 		4)
 			break
+			;;
 	esac
 done
 
