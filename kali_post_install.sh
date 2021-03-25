@@ -26,11 +26,11 @@ sudo apt-get update
 sudo apt-get install typora
 
 #Install Ghidra
-git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/
+git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/ghidra
 
 #Install Proxmark3 RRG/Iceman & requirements
 sudo apt-get install --no-install-recommends git ca-certificates build-essential pkg-config libreadline-dev gcc-arm-none-eabi libnewlib-dev qtbase5-dev libbz2-dev libbluetooth-dev
 sudo apt remove modemmanager
-git clone https://github.com/RfidResearchGroup/proxmark3.git /opt
+git clone https://github.com/RfidResearchGroup/proxmark3.git /opt/proxmark3
 cd proxmark3 && make clean && make all
 sudo make install
