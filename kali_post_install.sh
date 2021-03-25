@@ -1,12 +1,22 @@
 #!/bin/bash
 
+#Custom ZSHRC
 curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc | base64 -d > ~/.zshrc
 
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install git
 sudo apt-get install default-jdk
+sudo apt-get install terminator
+sudo apt-get install fzf
+sudo apt-get install tree
+sudo apt install powershell-empire
 
 #Install Ghidra
 git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/
 
-#Install Proxmark3 RRG/Iceman
+#Install Proxmark3 RRG/Iceman & requirements
+sudo apt-get install --no-install-recommends git ca-certificates build-essential pkg-config libreadline-dev gcc-arm-none-eabi libnewlib-dev qtbase5-dev libbz2-dev libbluetooth-dev
+sudo apt remove modemmanager
+git clone https://github.com/RfidResearchGroup/proxmark3.git /opt
+cd proxmark3 && make clean && make all
+sudo make install
