@@ -26,11 +26,21 @@ sudo apt-get update
 sudo apt-get install typora
 
 #Install Ghidra
-git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/ghidra
+sudo git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/ghidra
 
 #Install Proxmark3 RRG/Iceman & requirements
 sudo apt-get install --no-install-recommends git ca-certificates build-essential pkg-config libreadline-dev gcc-arm-none-eabi libnewlib-dev qtbase5-dev libbz2-dev libbluetooth-dev
 sudo apt remove modemmanager
-git clone https://github.com/RfidResearchGroup/proxmark3.git /opt/proxmark3
+sudo git clone https://github.com/RfidResearchGroup/proxmark3.git /opt/proxmark3
 cd proxmark3 && make clean && make all
 sudo make install
+
+# OSINT TOOLS
+#Install Ignorant (Phone check)
+sudo git clone https://github.com/megadose/ignorant.git /opt/ignorant
+cd /opt/ignorant
+sudo python3 setup.py install
+#Install Xeuledoc (Google Docs check)
+git clone https://github.com/Malfrats/xeuledoc.git /opt/xeuledoc
+cd /opt/xeuledoc/
+sudo python3 setup.py install
