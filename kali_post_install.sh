@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Keyboard to FR
+sudo dpkg-reconfigure keyboard-configuration
+echo "Keyboard layout changed to FR."
+
 #Custom ZSHRC
 echo "Replacing default ZSHRC..." ; curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc &> /dev/null | base64 -d > ~/.zshrc &> /dev/null
 
