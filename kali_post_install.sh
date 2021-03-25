@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # Menu
-PS3='Please enter your choice: '
-options=("APT update & upgrade" "Change keyboard layout to FR" "Customize .zshrc" "Quit")
-select option in "${options[@]}"
+PS3="Please enter your choice: "
+select option in "APT update & upgrade" "Change keyboard layout to FR" "Customize .zshrc" "Quit"
 do
 	case $option in
 		1)
-			echo "APT update & upgrade."; sudo apt-get update && sudo apt-get upgrade &> /dev/null && sudo apt install -y --reinstall virtualbox-guest-x11 &> /dev/null
+			echo "APT update & upgrade."; sudo apt-get update && sudo apt-get upgrade && sudo apt install -y --reinstall virtualbox-guest-x11
 			;;
 		2)
 		# Keyboard to FR
@@ -16,7 +15,7 @@ do
 			;;
 		3)
 		# Custom ZSHRC
-			echo "Replacing default ZSHRC..." ; curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc &> /dev/null | base64 -d > ~/.zshrc &> /dev/null
+			echo "Replacing default ZSHRC..." ; curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc | base64 -d > ~/.zshrc
 			source ~/.zshrc
 			;;
 		4)
