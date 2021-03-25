@@ -19,6 +19,12 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
+#Install Typora
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+sudo apt-get install typora
+
 #Install Ghidra
 git clone https://github.com/NationalSecurityAgency/ghidra.git /opt/
 
