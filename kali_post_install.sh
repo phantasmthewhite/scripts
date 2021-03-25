@@ -5,15 +5,15 @@ PS3="Please enter your choice: "
 select option in "APT update & upgrade" "Change keyboard layout to FR" "Customize .zshrc" "Quit"
 do
 	case $option in
-		1)
+		"APT update & upgrade")
 			echo "APT update & upgrade."; sudo apt-get update && sudo apt-get upgrade && sudo apt install -y --reinstall virtualbox-guest-x11
 			;;
-		2)
+		"Change keyboard layout to FR")
 		# Keyboard to FR
 			sudo dpkg-reconfigure keyboard-configuration
 			echo "Keyboard layout changed to FR."
 			;;
-		3)
+		"Customize .zshrc")
 		# Custom ZSHRC
 			echo "Replacing default ZSHRC..." ; curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc | base64 -d > ~/.zshrc
 			source ~/.zshrc
