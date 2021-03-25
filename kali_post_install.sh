@@ -18,7 +18,7 @@ do
 			echo "Replacing default ZSHRC..." ; curl https://raw.githubusercontent.com/phantasmthewhite/scripts/main/zshrc | base64 -d > ~/.zshrc
 			source ~/.zshrc
 			;;
-		4)
+		Quit)
 			break
 			;;
 	esac
