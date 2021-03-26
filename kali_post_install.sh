@@ -45,7 +45,7 @@ echo "Installing Ghidra in /opt ..."; sudo git clone https://github.com/National
 sudo apt-get install --no-install-recommends git ca-certificates build-essential pkg-config libreadline-dev gcc-arm-none-eabi libnewlib-dev qtbase5-dev libbz2-dev libbluetooth-dev &> /dev/null
 sudo apt remove modemmanager &> /dev/null
 sudo git clone https://github.com/RfidResearchGroup/proxmark3.git /opt/proxmark3 &> /dev/null
-cd proxmark3 && make clean &> /dev/null && make all &> /dev/null
+cd /opt/proxmark3 && sudo make clean &> /dev/null && sudo make all &> /dev/null
 echo "Downloading & Installing Proxmark3 in /opt ..."; sudo make install &> /dev/null
 
 # OSINT TOOLS
