@@ -55,7 +55,7 @@ echo "Downloading & Installing Proxmark3 in /opt ..."; sudo make install &> /dev
 sudo git clone https://github.com/megadose/ignorant.git /opt/ignorant &> /dev/null
 echo "Installing Ignorant..."; cd /opt/ignorant && sudo python3 setup.py install &> /dev/null
 # Install Xeuledoc (Google Docs check)
-git clone https://github.com/Malfrats/xeuledoc.git /opt/xeuledoc &> /dev/null
+sudo git clone https://github.com/Malfrats/xeuledoc.git /opt/xeuledoc &> /dev/null
 echo "Installing Xeuledoc..."; cd /opt/xeuledoc/ && sudo python3 setup.py install
 
 echo "+ Pour le profil Terminator ACI, après l'avoir installé via le plugin, aller dans :"
