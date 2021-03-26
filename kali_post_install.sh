@@ -20,6 +20,7 @@ echo "Installing Tree..."; sudo apt-get install tree &> /dev/null
 echo "Installing Empire C2..."; sudo apt-get install powershell-empire &> /dev/null
 
 # Custom Terminator
+sudo apt install pip
 sudo pip install requests &> /dev/null
 mkdir -p ~/.config/terminator/plugins &> /dev/null
 echo "Downloading custom profiles for Terminator..."; wget https://git.io/v5Zww -O ~/.config/terminator/plugins/terminator-themes.py &> /dev/null
